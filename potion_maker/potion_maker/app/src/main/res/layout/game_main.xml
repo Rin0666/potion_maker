@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_game_layout"
+    tools:context=".MainGame">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_game_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="Return"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <Button
+            android:id="@+id/button_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="Instructions"
+            app:layout_constraintTop_toBottomOf="@+id/button_game_return"
+            app:layout_constraintLeft_toLeftOf="@+id/button_game_return"/>
+        <Button
+            android:id="@+id/button_game_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shelf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ginseng"
+            android:layout_width="135dp"
+            android:layout_height="154dp"
+            android:layout_marginLeft="-10dp"
+            app:srcCompat="@drawable/ginseng"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/current_ingredient"/>
+        <ImageView
+            android:id="@+id/cinnamon"
+            android:layout_width="135dp"
+            android:layout_height="154dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="5dp"
+            app:srcCompat="@drawable/cinnamon"
+            app:layout_constraintLeft_toRightOf="@+id/ginseng"
+            app:layout_constraintTop_toTopOf="@+id/ginseng"/>
+        <ImageView
+            android:id="@+id/turmeric"
+            android:layout_width="135dp"
+            android:layout_height="154dp"
+            app:srcCompat="@drawable/turmeric"
+            app:layout_constraintLeft_toRightOf="@+id/cinnamon"
+            app:layout_constraintTop_toTopOf="@+id/cinnamon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/current_ingredient"
+            android:layout_width="135dp"
+            android:layout_height="154dp"
+            app:layout_constraintBottom_toTopOf="@id/bottle"
+            app:layout_constraintLeft_toRightOf="@+id/ginseng"
+            android:background="@drawable/tray"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottle"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/bottle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
